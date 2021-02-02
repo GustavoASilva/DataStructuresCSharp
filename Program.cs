@@ -7,20 +7,15 @@ namespace DataStructuresStudy
     {
         static void Main(string[] args)
         {
-            var newDA = new DynamicArray<string>();
-            Console.WriteLine(newDA.Size);
+            new System.Globalization.CultureInfo("pt-br");
+            var newDA = new DynamicArray<string>(16);
 
-            var aux = new string[16];
-
-            for(int i = 0; i < aux.Length; i++)
+            for (int i = 0; i < newDA.Capacity; i++)
             {
-                aux[i] = i.ToString();
+                newDA[i] = i.ToString();
             }
 
-           
-
-
-            newDA.AddRange(aux);
+            newDA.Reset();
         }
     }
 }
